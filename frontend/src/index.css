@@ -55,15 +55,33 @@ h2 {
 /* HEADER */
 .navbar {
   background: #f8f9fa;
-  padding-top: 1.9rem;
-  padding-bottom: 1.9rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar-brand-custom {
+  font-size: 2.25rem;
+  color: #00a36c;
+  text-transform: initial;
+  margin-right: 1rem;
+}
+.navbar-brand-custom .fas.fa-seedling {
+  margin-left: 0.5rem;
 }
 
 a.btn.signup-button {
-  background: #00a36c;
-  color: #fff !important;
   box-shadow: 0px 0px 8px rgb(0 0 0 / 10%), 0px 4px 4px rgb(0 0 0 / 4%);
   border-radius: 500px;
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important;
+  background: #00a36c;
+  color: #fff !important;
+}
+a.btn.cart-button {
+  box-shadow: 0px 0px 8px rgb(0 0 0 / 10%), 0px 4px 4px rgb(0 0 0 / 4%);
+  border-radius: 500px;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  background: #fff;
+  color: #212529 !important;
 }
