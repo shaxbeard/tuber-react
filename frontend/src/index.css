@@ -85,3 +85,9 @@ a.btn.cart-button {
   background: #fff;
   color: #212529 !important;
 }
+
+/* SIGN UP FORM */
+.sign-up-form .btn-primary {
+  width: 100%;
+  background-color: #00a36c;
+}
