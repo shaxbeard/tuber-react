@@ -5,6 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import SearchBox from "./SearchBox";
 import { logout } from "../actions/userActions";
+import Button from "./Button";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -18,11 +19,8 @@ const Header = () => {
 
   return (
     <header>
-      {/* <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect> */}
       <Navbar expand="lg" collapseOnSelect>
-        {/* <Container> */}
         <LinkContainer to="/">
-          {/* <Navbar.Brand>Tuber</Navbar.Brand> */}
           <Navbar className="navbar-brand-custom">
             Tuber<i class="fas fa-seedling"></i>
           </Navbar>
@@ -31,11 +29,12 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Route render={({ history }) => <SearchBox history={history} />} />
           <Nav className="ml-auto">
-            <LinkContainer to="/cart" className="btn cart-button">
-              <Nav.Link>
-                <i className="fas fa-shopping-cart"></i> Cart
-              </Nav.Link>
-            </LinkContainer>
+            <Button
+              link="/cart"
+              linkClass="btn cart-button"
+              iconClass="fas fa-shopping-cart"
+              text="Cart"
+            />
             {userInfo ? (
               <NavDropdown title={userInfo.name} id="username">
                 <LinkContainer to="/profile">
@@ -46,11 +45,12 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <LinkContainer to="/login" className="btn signup-button">
-                <Nav.Link>
-                  <i className="fas fa-user"></i> Sign In
-                </Nav.Link>
-              </LinkContainer>
+              <Button
+                link="/login"
+                linkClass="btn signup-button"
+                iconClass="fas fa-user"
+                text="Sign in"
+              />
             )}
             {userInfo && userInfo.isAdmin && (
               <NavDropdown title="Admin" id="adminmenu">
