@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import "./FormContainer.scss";
 
 const FormContainer = ({ children }) => {
   return (
