@@ -1,5 +1,6 @@
 body {
   font-family: "Raleway", sans-serif;
+  font-weight: 400;
   letter-spacing: normal;
   font-size: initial;
   line-height: initial;
@@ -45,9 +46,17 @@ label {
 /* HEADER */
 .navbar {
   background: #f8f9fa;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 30px 40px;
   font-weight: 400;
+  z-index: 3;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+.navbar-collapse {
+  z-index: 3;
+  margin-left: 150px;
 }
 
 .navbar-brand-custom {
@@ -76,4 +85,31 @@ label {
 .sign-in-form .btn-primary {
   width: 100%;
   background-color: #00a36c;
+}
+
+/* LANDING PAGE */
+
+.container {
+  max-width: 100%;
+  padding: 0;
+  // height: calc(100vh - 104px);
+  height: 100vh;
+}
+.hero-image {
+  // margin-top: 104px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/strawberry-garden.jpeg ");
+  // background-image: url("/images/strawberry-garden.jpeg ");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text {
+  left: 3%;
+  position: absolute;
+  color: white;
+  top: 33%;
+  font-size: 80px;
 }
